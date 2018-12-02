@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;//インスペクタを改造するマン
 
-[CustomEditor(typeof(Inspectortest/*ここは自分のクラス名*/))]
+//[CustomEditor(typeof(Inspectortest/*ここは自分のクラス名*/))]
 public class Inspectortest : MonoBehaviour {
     [SerializeField]
     int[] a;
