@@ -15,6 +15,10 @@ public class CameraContlolerTEST : MonoBehaviour {
 
     [SerializeField]
     Vector2 rotatespeed;
+    [SerializeField]
+    Vector2 HorizonMove;
+    [SerializeField]
+    Vector2 HorizonMovespeed;
 	// Use this for initialization
 	void Start () {
         //各種初期化取得
@@ -42,10 +46,20 @@ public class CameraContlolerTEST : MonoBehaviour {
             Thistrans.RotateAround(Center, Thistrans.right, rotatespeed.y);     //回転
              
         }
+        //カメラ移動
+        if (Input.GetMouseButton(1)) {
+            HorizonMove.x = Input.GetAxis("Mouse X")*HorizonMovespeed.x;
+            HorizonMove.y = Input.GetAxis("Mouse Y")*HorizonMovespeed.y;
+            Center -= Thistrans.right * HorizonMove.x;
+            Thistrans.position -= Thistrans.right * HorizonMove.x;
+            Center -= new Vector3(0, 1, 0) * HorizonMove.y;
+            Thistrans.position -= new Vector3(0, 1, 0) * HorizonMove.y;
+        }
         if (wheel) {
             Thistrans.transform.position+=Thistrans.forward*Input.GetAxis("Mouse ScrollWheel");
             //this.GetComponent<Camera>().orthographicSize -= Input.GetAxis("Mouse ScrollWheel");//並行投影時用
         }
+
             
 	}
 }
