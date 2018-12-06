@@ -54,11 +54,11 @@ public class CameraContlolerTEST : MonoBehaviour {
             //マウス速度を取得,速度調整
             HorizonMove.x = Input.GetAxis("Mouse X")*HorizonMovespeed.x;
             HorizonMove.y = Input.GetAxis("Mouse Y")*HorizonMovespeed.y;
-            //カメラの向きベクトルとマウス加速度を合成カメラ自体の移動ベクトルを算出
+            //カメラの向きベクトルとマウス加速度を合成カメラ自体の移動ベクトルを算出Centerの移動
             Center -= Thistrans.right * HorizonMove.x;
-            Thistrans.position -= Thistrans.right * HorizonMove.x;
             Center -= Thistrans.up * HorizonMove.y;
-            //カメラ移動
+            //カメラの向きベクトルとマウス加速度を合成カメラ自体の移動ベクトルを算出Thistrans.positionの移動
+            Thistrans.position -= Thistrans.right * HorizonMove.x;
             Thistrans.position -= Thistrans.up * HorizonMove.y;
             center.transform.position = Center;
         }
