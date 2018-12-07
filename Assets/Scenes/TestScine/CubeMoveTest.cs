@@ -23,6 +23,7 @@ public class CubeMoveTest : MonoBehaviour {
             test = cameratrans.right * mousemove.x;
             test += cameratrans.up * mousemove.y;
             this.transform.position += new Vector3(0, 0, test.z);
+
         }
     }
     public void PlusBigin() {
