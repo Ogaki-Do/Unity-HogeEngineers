@@ -24,7 +24,7 @@ public class PanelControler : MonoBehaviour {
 
         if (Drag) {
             MouseMoveVectol3D = Draging(Camera, MouseMove);
-            this.transform.position += Vector3.Scale(MouseMoveVectol3D, this.transform.forward);
+            this.transform.position += this.transform.forward*Vector3.Dot(MouseMoveVectol3D, this.transform.forward);
         }
         else {
             MouseMoveVectol3D =new Vector3(0, 0, 0);
@@ -35,11 +35,13 @@ public class PanelControler : MonoBehaviour {
 
 
     //マウス入力を３次元に変換
-    public Vector3 Draging (Transform camera,Vector2 MouseMove){
-        Vector3 OutAddTransform;
-        OutAddTransform = camera.right * MouseMove.x;
-        OutAddTransform += camera.up * MouseMove.y;
-        return OutAddTransform;
+    public Vector3 Draging(Transform camera, Vector2 MouseMove) {
+        Vector3 OutAddTransform=Vector3.zero;
+        if (Input.GetMouseButton(0)){
+            OutAddTransform = camera.right * MouseMove.x;
+            OutAddTransform += camera.up * MouseMove.y;
+        }
+        return Vector3.Normalize(OutAddTransform)*0.05f;
     }
 
 

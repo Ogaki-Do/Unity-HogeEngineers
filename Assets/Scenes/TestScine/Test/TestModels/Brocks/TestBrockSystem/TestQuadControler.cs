@@ -17,8 +17,8 @@ public class TestQuadControler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Sphere.SetActive(ParentCon.enaible);
-        SphereCollider.enabled = ParentCon.enaible;
+        //Sphere.SetActive(ParentCon.enaible);
+        //SphereCollider.enabled = ParentCon.enaible;
 
     }
 }
