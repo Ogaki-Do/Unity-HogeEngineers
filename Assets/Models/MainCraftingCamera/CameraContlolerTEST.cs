@@ -5,8 +5,8 @@ using UnityEditor;
 
 public class CameraContlolerTEST : MonoBehaviour {
     [SerializeField]
+    public GameObject CenterObject;
     public Vector3 Center;//カメラの見ている先
-    [SerializeField]
     GameObject center;
     Transform Thistrans;//その名の通り
 
@@ -24,12 +24,10 @@ public class CameraContlolerTEST : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //各種初期化取得
+        center = Instantiate(CenterObject) as GameObject;
         Thistrans = this.transform;
         Center = new Vector3(0, 0, 0);
         center.transform.position = Center;
-
-
-
     }
 	
 	// Update is called once per frame
@@ -64,9 +62,12 @@ public class CameraContlolerTEST : MonoBehaviour {
         }
 
         //カメラ前移動;
-        if (wheel) {
+        if (wheel&&Vector3.Distance(Thistrans.position,Center)>0.5f) {
             Thistrans.transform.position+=Thistrans.forward*Input.GetAxis("Mouse ScrollWheel");
             this.GetComponent<Camera>().orthographicSize -= Input.GetAxis("Mouse ScrollWheel");//並行投影時用
+        }else if(Vector3.Distance(Thistrans.position, Center) < 0.5f) {
+            Thistrans.transform.position += Thistrans.forward * (Vector3.Distance(Thistrans.position, Center) - 0.51f);
+            this.GetComponent<Camera>().orthographicSize -= (Vector3.Distance(Thistrans.position, Center) - 0.51f);//並行投影時用
         }
 
             

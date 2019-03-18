@@ -9,34 +9,34 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1213520859364446}
+  m_RootGameObject: {fileID: 1427776393150678}
   m_IsPrefabAsset: 1
---- !u!1 &1213520859364446
+--- !u!1 &1427776393150678
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4009588027766526}
-  - component: {fileID: 33259815126884462}
-  - component: {fileID: 23737077761230426}
-  - component: {fileID: 114155061365204706}
-  - component: {fileID: 136743869725303806}
-  - component: {fileID: 114941409160735004}
+  - component: {fileID: 4231402501862606}
+  - component: {fileID: 33767432460072048}
+  - component: {fileID: 23807644168950854}
+  - component: {fileID: 136763952634067624}
+  - component: {fileID: 114496399424514648}
+  - component: {fileID: 114981718415470750}
   m_Layer: 0
-  m_Name: "Monyo\u77E2\u5370Var3"
-  m_TagString: Untagged
+  m_Name: "\u77E2\u5370"
+  m_TagString: Yazirusi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4009588027766526
+--- !u!4 &4231402501862606
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1213520859364446}
+  m_GameObject: {fileID: 1427776393150678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -44,12 +44,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23737077761230426
+--- !u!23 &23807644168950854
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1213520859364446}
+  m_GameObject: {fileID: 1427776393150678}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +59,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 59369bd562a026147b8fa3792d274183, type: 2}
+  - {fileID: 2100000, guid: 0ce9c4bff27737b4cbedcaa5c25ae190, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,19 +79,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33259815126884462
+--- !u!33 &33767432460072048
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1213520859364446}
-  m_Mesh: {fileID: 4300000, guid: 50d1193506f1ea343a944fcd732896a1, type: 3}
---- !u!114 &114155061365204706
+  m_GameObject: {fileID: 1427776393150678}
+  m_Mesh: {fileID: 4300000, guid: 7218ff2369732084e9c51013194c9864, type: 3}
+--- !u!114 &114496399424514648
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1213520859364446}
+  m_GameObject: {fileID: 1427776393150678}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -102,7 +102,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114941409160735004}
+        - m_Target: {fileID: 114981718415470750}
           m_MethodName: BeginDrag
           m_Mode: 1
           m_Arguments:
@@ -112,14 +112,14 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   - eventID: 14
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114941409160735004}
+        - m_Target: {fileID: 114981718415470750}
           m_MethodName: EndDrag
           m_Mode: 1
           m_Arguments:
@@ -133,23 +133,24 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!114 &114941409160735004
+--- !u!114 &114981718415470750
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1213520859364446}
+  m_GameObject: {fileID: 1427776393150678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab35f503691381439b7c66b9fec31c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 48b60e911cca9b541a4cc3327e68748f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &136743869725303806
+  DragMove: 0
+--- !u!136 &136763952634067624
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1213520859364446}
+  m_GameObject: {fileID: 1427776393150678}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
